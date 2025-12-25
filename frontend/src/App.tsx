@@ -80,7 +80,8 @@ function App() {
     setError(null)
 
     try {
-      const response = await fetch('http://localhost:8000/analyze', {
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_BASE_URL}/analyze`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -200,7 +201,8 @@ function App() {
     // Fetch supported models from backend. If it fails, fallback to bundled list above.
     const init = async () => {
       try {
-        const res = await fetch('http://localhost:8000/models')
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+        const res = await fetch(`${API_BASE_URL}/models`)
         if (res.ok) {
           const data = await res.json()
           if (data && Array.isArray(data.models) && data.models.length > 0) {
