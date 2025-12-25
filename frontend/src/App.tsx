@@ -513,9 +513,7 @@ function App() {
         <div className="footer-content">
           <p>&copy; 2025 Competitor Analysis Pro. Powered by AI for business intelligence.</p>
           <div className="footer-links">
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#contact">Contact Us: parikhparth23@gmail.com</a>
           </div>
         </div>
       </footer>
