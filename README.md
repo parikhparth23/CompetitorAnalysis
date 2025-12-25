@@ -178,19 +178,6 @@ Design decisions:
 
 ---
 
-## Security & Production Notes
-
-- Never commit secrets into Git. Use environment variables or a secret manager.
-- Restrict Supabase service role keys to server-only code.
-- Rotate API keys if any leak is suspected.
-- For production deployments consider protected endpoints, rate limiting, request auditing, and not exposing the `/env-check` endpoint publicly.
-
----
-
-## Deployment (short)
-
-- Backend: containerize with Docker; ensure environment variables are set in the hosting environment (e.g., Vercel Serverless functions, AWS ECS, Render, Railway).
-- Frontend: build with `npm run build` and deploy to static hosting (Netlify, Vercel, S3 + CloudFront).
 
 ---
 
@@ -200,11 +187,3 @@ Design decisions:
 - Change prompt or AI call: `backend/main.py` inside `/analyze` handler
 - Change UI text / layout: `frontend/src/App.tsx` and `frontend/src/App.css`
 
----
-
-If you'd like, I can also:
-- Add screenshots to this README
-- Add example `.env.example` (without secrets) for onboarding
-- Add a `docker-compose` file for a single-command local start
-
-Tell me which of those you'd like next and I'll add them.

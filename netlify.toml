@@ -1,0 +1,13 @@
+[build]
+  # This tells Netlify where the frontend code lives
+  base = "frontend"
+  
+  # This is the command to build Next.js
+  command = "npm run build"
+  
+  # This is the secret fix: it tells Netlify exactly where the output is
+  # Once 'base' is set to frontend, this path is relative to that folder
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
